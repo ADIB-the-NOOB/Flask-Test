@@ -14,11 +14,12 @@ class Item(db.Model):
     barcode = db.Column(db.String(length=12), nullable=False, unique=True)
     description = db.Column(db.String(length=1024), nullable=False, unique=True)
 
+    def __repr__(self):
+        return f"Name : {self.name}"
 
 db.create_all()
 
-item1 = Item(name='Iphone12', price=500, barcode='331111234563', description='wdffdsfdfdsf')
-item2 = Item(name= 'Iphone10', price=400, barcode='111111111111', description='noob')
+
 
 
 
